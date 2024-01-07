@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,9 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class PokeSearchComponent implements OnInit {
 
-  @Output()
+  @Output() public emmitSearch: EventEmitter<string> = new EventEmitter()
 
   ngOnInit(): void {
+  }
+
+  public search(value: string) {
+    this.emmitSearch.emit(value)
   }
 
 }
