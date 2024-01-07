@@ -8,7 +8,7 @@ const PAGES_ROUTES: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'details',
+    path: 'details/:id',
     component: DetailsComponent,
   },
 ];
