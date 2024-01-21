@@ -1,7 +1,7 @@
 @import "/src/config-scss/rem-calc.scss";
 
 .paginator {
-  width: 100%;
+  width: 94%;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
@@ -9,13 +9,14 @@
   margin-top: rem-calc(5);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 rem-calc(20);
 }
 
 .page-info {
   color: white;
   font-family: Roboto;
   font-size: 0.7rem;
-  padding-left: rem-calc(20);
 }
 
 .buttons {
@@ -25,11 +26,12 @@
   gap: 1rem;
   flex-wrap: wrap;
   cursor: pointer;
+  align-items: center;
 }
 
 .active {
-  background-color: #dce0d9;
-  color: #313329;
+  background-color: #fff;
+  color: black;
   border-radius: 50%;
   max-height: 35px;
   border: none;
@@ -38,14 +40,16 @@
   padding: .3rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: 600;
 }
 
-.change-page{
-  padding-left: rem-calc(100);
+.change-page {
   display: flex;
   flex-direction: row;
   gap: rem-calc(20);
+  padding-left: rem-calc(40);
+  align-items: center;
 }
 
 button {
@@ -72,6 +76,7 @@ button:focus {
 .change-page-size {
   display: flex;
   gap: rem-calc(4);
+  align-items: center;
 }
 
 .text-caption {
@@ -82,23 +87,21 @@ button:focus {
 
 .page-size-section {
   padding-top: rem-calc(5);
-  padding-left: rem-calc(20);
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
+}
+
+.icons{
+  font-size: rem-calc(10);
 }
 
 .select-paginator {
   border: none;
   background-color: transparent;
-  color: #dce0d9;
-
-
-  &:hover {
-    cursor: pointer;
-  }
+  color: #fff;
 }
 
-.paginator-option{
-  color: #313329;
+.select-paginator-item {
+  color: black;
 }

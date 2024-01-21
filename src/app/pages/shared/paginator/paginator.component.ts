@@ -21,6 +21,7 @@ export class PaginatorComponent implements AfterViewInit {
   private cdr: ChangeDetectorRef = inject(ChangeDetectorRef)
 
   ngAfterViewInit(): void {
+    this.cdr.detectChanges()
     this.generateButtons()
   }
 
@@ -90,9 +91,9 @@ export class PaginatorComponent implements AfterViewInit {
 
   public selectPageSize(pageSize: number){
     this.itemsPerPage = pageSize
+    this.currentPage = 0
     this.generateButtons()
     this.emitValue()
     this.cdr.markForCheck()
-    this.currentPage = this.totalPages - 1
   }
 }

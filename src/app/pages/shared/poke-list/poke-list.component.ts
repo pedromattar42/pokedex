@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import { PokeApiService } from 'src/app/service/poke-api.service';
 import { RouterModule } from '@angular/router';
 import { PokeSearchComponent } from '../poke-search/poke-search.component';
@@ -13,6 +13,7 @@ import { PaginatorComponent } from '../paginator/paginator.component';
     RouterModule,
     PokeSearchComponent,
     PaginatorComponent,
+    NgClass
   ],
   templateUrl: './poke-list.component.html',
   styleUrls: ['./poke-list.component.scss'],

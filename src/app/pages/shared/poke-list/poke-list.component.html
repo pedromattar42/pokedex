@@ -6,7 +6,9 @@
         <h2>{{pokemon.name}}</h2>
 
         <ul>
-          <li *ngFor="let value of pokemon.status.types">
+          <li
+            [ngClass]="{electric: value.type.name === 'electric', grass: value.type.name === 'grass', poison: value.type.name === 'poison', fire: value.type.name === 'fire', water: value.type.name === 'water' }"
+            *ngFor="let value of pokemon.status.types">
             {{value.type.name}}
           </li>
         </ul>

@@ -77,5 +77,30 @@ $padding: rem-calc(20);
         }
       }
     }
+
+    .grass {
+      color: #fff;
+      background: green !important;
+    }
+
+    .poison {
+      color: #fff;
+      background: purple !important;
+    }
+
+    .fire {
+      color: #fff;
+      background: red !important;
+    }
+
+    .water {
+      color: #fff;
+      background: blue !important;
+    }
+
+    .electric {
+      color: gray;
+      background: yellow !important;
+    }
   }
 }
