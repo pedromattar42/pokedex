@@ -8,21 +8,25 @@ import { PaginatorComponent } from '../paginator/paginator.component';
 @Component({
   selector: 'app-poke-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, PokeSearchComponent, PaginatorComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    PokeSearchComponent,
+    PaginatorComponent,
+  ],
   templateUrl: './poke-list.component.html',
   styleUrls: ['./poke-list.component.scss'],
 })
 export class PokeListComponent implements OnInit {
   #pokeApiService = inject(PokeApiService);
   public getAllPokemons: any[] = [];
-  public pokemonCount: number = 0
+  public pokemonCount: number = 0;
   private setAllPokemons: any[] = [];
 
   ngOnInit(): void {
-    this.#pokeApiService.apiGetAllPokemons.subscribe((res) => {
+    this.#pokeApiService.apiGetAllPokemons().subscribe((res) => {
       this.setAllPokemons = res.results;
       this.pokemonCount = res.count;
-      console.log(res.count)
       this.getAllPokemons = this.setAllPokemons;
     });
   }
@@ -33,5 +37,14 @@ export class PokeListComponent implements OnInit {
     );
 
     this.getAllPokemons = filter;
+  }
+
+  public getPageInfo(event: any) {
+    this.#pokeApiService
+      .apiGetAllPokemons(event.currentPage, event.itemsPerPage)
+      .subscribe((res) => {
+        this.setAllPokemons = res.results;
+        this.getAllPokemons = this.setAllPokemons;
+      });
   }
 }

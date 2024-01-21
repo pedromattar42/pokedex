@@ -11,27 +11,94 @@
   align-items: center;
 }
 
-p {
+.page-info {
   color: white;
   font-family: Roboto;
   font-size: 0.7rem;
-  padding-left: rem-calc(2);
+  padding-left: rem-calc(20);
 }
 
 .buttons {
   color: #fff;
   font-family: Roboto;
   display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .active {
-  color: red;
+  background-color: #dce0d9;
+  color: #313329;
+  border-radius: 50%;
+  max-height: 35px;
+  border: none;
+  min-width: 30px;
+  white-space: nowrap;
+  padding: .3rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
 }
 
-.after-buttons{
+.change-page{
+  padding-left: rem-calc(100);
   display: flex;
+  flex-direction: row;
+  gap: rem-calc(20);
 }
 
-.pervious-buttons{
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button i {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  color: #fff;
+}
+
+button:focus {
+  outline: none;
+}
+
+.change-page-size {
   display: flex;
+  gap: rem-calc(4);
+}
+
+.text-caption {
+  color: white;
+  font-family: Roboto;
+  font-size: 0.7rem;
+}
+
+.page-size-section {
+  padding-top: rem-calc(5);
+  padding-left: rem-calc(20);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.select-paginator {
+  border: none;
+  background-color: transparent;
+  color: #dce0d9;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.paginator-option{
+  color: #313329;
 }
