@@ -1,0 +1,19 @@
+<div class="paginator">
+  <p>Página {{currentPage}} de {{totalPages}}</p>
+  <!-- <div class="button" *ngFor="let item of buttons; let i = index">
+    {{item + 1}}
+  </div> -->
+  <ng-container class="previous-buttons">
+    <button><i class="pi-angle-left"></i></button>
+    <button><i class="pi-angle-left"></i></button>
+  </ng-container>
+  <ul class="buttons">
+    <li [ngClass]="{active: i === currentPage}" *ngFor="let item of buttons; let i = index"> {{item + 1}}
+    </li>
+  </ul>
+
+  <ng-container class="after-buttons">
+    <button><i class="pi pi-angle-right"></i></button>
+    <button><i class="pi pi-angle-double-right"></i></button>
+  </ng-container>
+</div>

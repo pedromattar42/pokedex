@@ -1,6 +1,7 @@
 @import "/src/config-scss/rem-calc.scss";
 
 $padding: rem-calc(20);
+
 :host {
   .listagem {
     display: flex;
